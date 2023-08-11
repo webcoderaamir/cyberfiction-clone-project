@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* #upperlayer{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(0%);
+    animation-name: page;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+@keyframes page{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+#upperlayer img{
+    height: 10rem;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-name: circle;
+}
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+.page1 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #343434;
+}
+
+.page2 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #343434;
+    overflow: hidden;
+}
+
+.page3 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #343434;
+    overflow: hidden;
+}
+
+.page4 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #343434;
+}
+
+canvas {
+    position: relative;
+    z-index: 9;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#loop {
+    width: 100%;
+    height: 25%;
+    /* background-color: cadetblue; */
+    position: absolute;
+    top: 30%;
+    font-size: 100px;
+    white-space: nowrap;
+    display: flex;
+}
+
+#loop h1 {
+    font-weight: 400;
+    animation-name: loop-anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color: #fff;
+}
+
+#loop span {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    font-weight: 600;
+    /* color: #fff; */
+}
+
+@keyframes loop-anim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#nav {
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+#nav h1 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+#nav button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: black;
+    color: #fff;
+    border: none;
+}
+
+#nav button:hover {
+    background: linear-gradient(#f1f1f1e0, #fff);
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.page1>h1 {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.page1>h4 {
+    position: absolute;
+    top: 69%;
+    left: 69%;
+    font-weight: 700;
+    color: #fff;
+}
+
+.page2>.left-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #fff;
+}
+
+.page2>.left-text>h3 {
+    font-weight: 400;
+    color: #7c7c7c;
+}
+
+.page2>.left-text>h1 {
+    font-size: 45px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.page2>.right-text {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    text-align: end;
+    color: #fff;
+}
+
+.page2>.right-text>h1 {
+    font-size: 45px;
+    line-height: 1.3;
+}
+
+.page2>.right-text>h3 {
+    font-weight: 400;
+    color: #7c7c7c;
+}
+
+#nav2 {
+    display: flex;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+#minting {
+    width: 15%;
+    height: 15%;
+    position: fixed;
+    z-index: 9;
+    bottom: 2%;
+    right: 3%;
+}
+
+#minting>#min-text {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 55%;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#minting>#min-text>h1 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "gilroy";
+    font-weight: 500;
+    margin-left: 1.3rem;
+}
+
+#minting>img {
+    height: 7rem;
+    position: absolute;
+    left: -5%;
+    top: -4.5%;
+    z-index: 9;
+}
+
+.page3>.left-text {
+    position: absolute;
+    top: 32%;
+    left: 14%;
+    color: #fff;
+}
+
+.page3>.left-text>h3 {
+    font-weight: 400;
+    color: #7c7c7c;
+}
+
+.page3>.left-text>h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 600;
+}
+
+.page3>.right-text {
+    position: absolute;
+    top: 60%;
+    right: 7%;
+    text-align: end;
+    color: #fff;
+}
+
+.page3>.right-text>h1 {
+    font-size: 45px;
+    line-height: 2;
+}
+
+.page4>.left-text {
+    position: absolute;
+    top: 39%;
+    left: 8%;
+    text-align: start;
+}
+
+.page4>.left-text>h1 {
+    line-height: 1.2;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.page4>.right-text {
+    position: absolute;
+    top: 47%;
+    right: 10%;
+    text-align: end;
+    color: #fff;
+}
+
+.page4>.right-text>h1 {
+    line-height: 1.2;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.page5 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dadada;
+    position: relative;
+}
+
+#img-loop {
+    width: 204vw;
+    height: 40%;
+    /* background-color: red; */
+    position: relative;
+    top: 60%;
+    display: flex;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+}
+
+.img-box {
+    width: 17%;
+    height: 100%;
+    /* background-color: orange; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation-name: loop-anim2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loop-anim2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.img-box>img {
+    height: 24rem;
+}
+
+#text-area {
+    width: 60%;
+    height: 45%;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    text-align: center;
+}
+
+#text-area>h3 {
+    margin-top: 10vh;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#text-area>h1 {
+    font-size: 4rem;
+    line-height: 1;
+    margin-top: 1vh;
+}
+
+#text-area>h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2vh;
+}
+
+.page6 {
+    width: 100vw;
+    height: 100vh;
+    /* background: #343434; */
+    background-color: #171010;
+    position: relative;
+}
+
+.loop3 {
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    top: 30%;
+    /* background-color: cadetblue; */
+    font-size: 70px;
+    white-space: nowrap;
+    display: flex;
+}
+
+.loop3 h1 {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    animation-name: loop-anim3;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loop-anim3 {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.loop4 {
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    top: 45%;
+    font-size: 70px;
+    white-space: nowrap;
+    display: flex;
+}
+
+.loop4 h1 {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    animation-name: loop-anim4;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loop-anim4 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.loop5 {
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    top: 60%;
+    font-size: 70px;
+    white-space: nowrap;
+    display: flex;
+}
+
+.loop5 h1 {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    animation-name: loop-anim5;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loop-anim5 {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#texts {
+    width: 30vw;
+    height: 20vh;
+    /* background-color: red; */
+    position: absolute;
+    top: 7%;
+    left: 33%;
+    text-align: center;
+}
+
+#texts h1 {
+    margin-top: 3vh;
+    font-size: 60px;
+    color: #fff;
+}
+
+#texts h5 {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 1vh;
+    font-weight: 400;
+}
+
+.page6 img {
+    position: absolute;
+    height: 38rem;
+    left: 33%;
+    top: 20%;
+    z-index: 9;
+}
+
+#texts2 {
+    width: 18vw;
+    height: 13vh;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 1%;
+    left: 40%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+#texts2 h1 {
+    margin-top: 1.5vh;
+}
+
+#texts2 h3 {
+    font-size: 15px;
+    margin-top: .5vh;
+    font-weight: 500;
+}
+
+#texts2 .icons {
+    position: relative;
+    display: flex;
+    width: 7vw;
+    height: 5vh;
+    /* background-color: blue; */
+    left: 7vw;
+    top: 1vh;
+}
+
+.icons-img1 {
+    position: absolute;
+}
+
+.icons-img1 img {
+    height: 2rem;
+}
+
+.icons-img2 {
+    position: absolute;
+    left: 40%;
+}
+
+.icons-img2 img {
+    height: 2rem;
+}
